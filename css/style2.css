@@ -1,0 +1,344 @@
+/*Universal Design Section*/
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   font-variant: small-caps;
+   letter-spacing: 7px;
+   font-family: var(--myFont);
+}
+
+:root{
+   --maroon: rgba(0,0,200,0.8);
+   --myFont: 'Rockwell';
+}
+
+h1 {
+   font-size: 3vw;
+   text-align: center;
+   color: white;
+}
+
+h2 {
+   
+   text-align: center;
+   font-size: 2vw;
+   color: white;
+}
+
+h3 {
+   letter-spacing: normal;
+   font-variant: normal;
+   text-align: center;
+   line-height: 300%;
+   font-size: calc(5pt + 0.6vw);
+   color: white;
+}
+
+p {
+   color: white;
+   font-variant: normal;
+   line-height: 300%;
+   letter-spacing: normal;
+   font-size: calc(6pt + 0.5vw);
+   text-align: justify;
+}
+
+.container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   transition: all .5s ease;
+}
+
+.container .row{
+   display: flex;
+   flex-direction: row-reverse;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-evenly;
+   box-shadow: 0 0 25px var(--maroon);
+}
+
+.container .row .col{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-content: center;
+}
+
+.container img{
+   object-fit: cover;
+   border: 5px groove rgba(0,0,200,0.8);
+   transition: 0.5s ease;
+}
+
+.container img:hover{
+   border: 50px groove rgba(0,0,200,0.8);
+   border-radius: 20%;
+   opacity: 0.8;
+}
+
+.navbar{
+   z-index: 2;
+   display: flex;
+   position: fixed;
+   width: 20%;
+   top: 0;
+}
+
+.navbar ul{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   list-style: none;
+   width: 80%;
+   margin: 15px;
+}
+
+.navbar .secret{
+   margin: none;
+   background-color: white;
+   box-shadow: none;
+   width: 20%;
+   left: 0;
+   bottom: 0;
+   transition: all 0.5s ease;
+}
+.navbar .secret a{
+   padding: 15px;
+}
+
+.navbar .secret:hover{
+   background-color: var(--maroon);
+}
+
+.secret .container{
+   width: 80%;
+   position: absolute;
+   right: 0;
+}
+
+.secret .container .row{
+   padding: 10%;
+   
+   margin: 3% 0;
+   background-color: var(--maroon);
+}
+
+
+.navbar ul li{
+   font-family: var(--myFont);
+   background-color: var(--maroon);
+   box-shadow: 0 0 25px var(--maroon);
+   width: 100%;
+   margin: 12% 0;
+   padding: 5%;
+   font-size: 20px;
+   letter-spacing: 7px;
+   font-weight: bold;
+}
+
+.navbar ul li a{
+   display: flex;
+   text-decoration: none;
+   justify-content: center;
+   color: white;
+   transition: all .5s ease;
+}
+
+.navbar ul li a:hover{
+   background-color: white;
+   color: var(--maroon);
+   box-shadow: 0 0 10px white;
+}
+
+.navbar ul li button{
+   display: flex;
+   justify-content: center;
+   text-decoration: none;
+   font-style: var(--myFont);
+   background-color: transparent;
+   width: 100%;
+   color: white;
+   border: none;
+   font-weight: bold;
+   font-size: inherit;
+   font-variant: inherit;
+   transition: all .5s ease;
+}
+
+.navbar ul li button:hover{
+   background-color: white;
+   color: var(--maroon);
+   box-shadow: 0 0 10px white;
+}
+
+/*Home Section*/
+#home{
+   height: 100vh;
+   width: 80%;
+   z-index: 0;
+   position: absolute;
+   background-color: var(--maroon);
+   right: 0;
+   top: 0;
+}
+#home .container,  #about .container{
+   height: 100%;
+   width: 100%;
+}
+
+#home .container .row, #about .container .row{
+   flex-wrap: nowrap;
+   height: 100%;
+}
+
+#home .container .row .col, #about .container .row .col{
+   width: 50%;
+   padding: 10%;
+}
+
+#home .container img, #about .container img{
+   max-height: 100%;
+   max-width: 100%;
+
+}
+
+#home .container img:hover{
+   opacity: 0.5;
+}
+
+
+/*About Section*/
+#about{
+   height: 100vh;
+   background-color: var(--maroon);
+   position: absolute;
+   top: 1000px;
+   width: 80%;
+   right: 0;
+}
+
+#about img:hover{
+   opacity: 0.3;
+}
+
+/*About Page*/
+
+#aboutpage{
+   width: 80%;
+   position: absolute;
+   right: 0;
+}
+
+#aboutpage .container{
+   padding: 5%;
+}
+
+#aboutpage .container .row{
+   margin: 3% 0;
+   padding: 5%;
+   background-color: var(--maroon);
+}
+#aboutpage .container .row .col{
+   width: 50%;
+   padding: 5%;
+}
+
+#aboutpage .container img{
+   width: 100%;
+   height: 100%;
+}
+
+/*Portfolio Page*/
+#portfolio{
+   position: absolute;
+   width: 80%;
+   right: 0;
+}
+#portfolio .container{
+   width: 100%;
+   height: 100%;
+}
+#portfolio .container .row{
+   padding: 5%;
+   margin: 3% 0;
+   background-color: var(--maroon);
+}
+#portfolio h3{
+   text-align: left;
+}
+
+#portfolio a{
+   width: 100%;
+}
+#portfolio a img{
+   width: 100%;
+   border-radius: 50%;
+}
+#portfolio a img:hover{
+   border-radius: 50%;
+}
+
+#portfolio .container .row .col{
+   width: 50%;
+   min-width: 300px;
+   padding: 5%;
+}
+#portfolio .container .row-blank{
+   padding: 2.5%;
+}
+
+/*Qualifications Page*/
+
+#qualities{
+   width: 80%;
+   position: absolute;
+   right: 0;
+}
+#qualities .container{
+   padding: 5%;
+}
+#qualities .container .row{
+   background-color: var(--maroon);
+   margin: 3% 0;
+   padding: 5%;
+   flex-wrap: nowrap;
+}
+
+#qualities .container .row .col{
+   margin: 2%;
+   width: 50%;
+}
+
+#qualities .container img{
+   width: 100%;
+   height: 100%;
+}
+
+/*service page*/
+
+#service{
+   width: 80%;
+   position: absolute;
+   right: 0;
+}
+#service .container{
+   padding: 5%;
+   height: 100%;
+   width: 100%;
+}
+#service .container .row{
+   background-color: var(--maroon);
+   margin: 3% 0;
+   padding: 5%;   
+}
+#service .container .row .col{
+   max-width: 50%;
+   padding: 5%;
+}
+
+#service .container img{
+   width: 100%;
+}

@@ -1,0 +1,304 @@
+/*Universal Design Section*/
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   font-variant: small-caps;
+   letter-spacing: 7px;
+   font-family: var(--myFont);
+}
+
+:root{
+   --maroon: rgb(73,0,0);
+   --myFont: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+   font-size: 6vw;
+   text-align: center;
+   color: white;
+}
+
+h2 {
+   
+   text-align: center;
+   font-size: 4vw;
+   color: white;
+}
+
+h3 {
+   letter-spacing: normal;
+   font-variant: normal;
+   text-align: center;
+   line-height: 150%;
+   font-size: calc(10pt + 1.2vw);
+   color: white;
+}
+
+p {
+   color: white;
+   font-variant: normal;
+   line-height: 150%;
+   letter-spacing: normal;
+   font-size: calc(8pt + 1vw);
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   background-color: rgba(0,0,0,0.2);
+}
+
+.container .row{
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-evenly;
+}
+
+.container .row .col{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-content: center;
+}
+
+.container img{
+   object-fit: cover;
+   border: 5px solid black;
+   transition: 0.5s ease;
+}
+
+.container img:hover{
+   border: 50px solid black;
+   opacity: 0.3;
+}
+
+/*navbar style 1*/
+/*Navigation bar*/
+
+.navbar{
+   z-index: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--maroon);
+   position: sticky;
+   top: 0;
+}
+
+.navbar ul{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   list-style: none;
+   margin: 15px 08px;
+}
+
+.navbar ul li{
+   font-family: var(--myFont);
+   font-size: 20px;
+   letter-spacing: 7px;
+   font-weight: bold;
+}
+
+.navbar .secret{
+   height: 0.2vh;
+   width: 0.2vw;
+}
+
+.secret {
+   background: url('../images/ZachryBuilding.jpg') no-repeat center center/cover;
+   height: 100vh;
+}
+
+.secret .container{
+   display: flex;
+   height: 100%;
+   padding: 10%;
+   background-color: rgba(0,0,0,0.8);
+   justify-content: center;
+   align-content: center;
+}
+
+
+.navbar ul li a{
+   display: flex;
+   text-decoration: none;
+   background-color: var(--maroon);
+   color: white;
+   padding: 8px 25px;
+
+   transition: all .5s ease;
+}
+
+.navbar ul li a:hover{
+   background-color: white;
+   color: var(--maroon);
+   box-shadow: 0 0 10px white;
+}
+
+.navbar ul li button{
+   display: flex;
+   text-decoration: none;
+   background-color: var(--maroon);
+   font-style: var(--myFont);
+   border: none;
+   font-weight: bold;
+   font-size: inherit;
+   font-variant: inherit;
+   color: white;
+   padding: 8px 25px;
+   transition: all .5s ease;
+}
+
+.navbar ul li button:hover{
+   background-color: white;
+   color: var(--maroon);
+   box-shadow: 0 0 10px white;
+}
+
+/*Home Section*/
+#home{
+   height: 92.5vh;
+   background: url('../images/ZachryBuilding.jpg') no-repeat center center/cover ;
+   width: 100%;
+   z-index: 0;
+}
+#home .container,  #about .container{
+   height: 100%;
+   width: 100%;
+}
+#home .container{
+   background-color: rgba(0,0,0,0.8);
+}
+
+#about .container{
+   background-color: rgba(0,0,0,0.2);
+}
+
+#home .container .row, #about .container .row{
+   flex-wrap: nowrap;
+   height: 100%;
+}
+
+#home .container .row .col, #about .container .row .col{
+   width: 50%;
+   padding: 10%;
+}
+
+#home .container img, #about .container img{
+   max-height: 100%;
+   max-width: 100%;
+   
+}
+
+#home .container img:hover{
+   opacity: 0.5;
+}
+
+
+/*About Section*/
+#about{
+   height: 100vh;
+   background-color: var(--maroon);
+}
+
+#about img:hover{
+   opacity: 0.3;
+}
+
+/*About Page*/
+
+#aboutpage{
+   background-color: var(--maroon);
+   max-width: 100%;
+}
+
+#aboutpage .container{
+   padding: 5%;
+}
+#aboutpage .container .row .col{
+   width: 50%;
+   padding: 5%;
+}
+
+#aboutpage .container img{
+   width: 100%;
+   height: 100%;
+}
+
+/*Portfolio Page*/
+#portfolio{
+   background-color: var(--maroon);
+}
+#portfolio .container{
+   padding: 5%;
+   width: 100%;
+   height: 100%;
+}
+#portfolio h3{
+   text-align: left;
+}
+
+#portfolio a{
+   width: 100%;
+}
+#portfolio a img{
+   width: 100%;
+   border-radius: 50%;
+}
+#portfolio a img:hover{
+   border-radius: 50%;
+}
+
+#portfolio .container .row .col{
+   width: 50%;
+   min-width: 300px;
+   padding: 5%;
+}
+#portfolio .container .row-blank{
+   padding: 2.5%;
+}
+
+/*Qualifications Page*/
+
+#qualities{
+   background-color: var(--maroon);
+   max-width: 100%;
+}
+#qualities .container{
+   padding: 5%;
+}
+#qualities .container .row{
+   flex-wrap: nowrap;
+}
+
+#qualities .container .row .col{
+   margin: 2%;
+   width: 50%;
+}
+
+#qualities .container img{
+   width: 100%;
+   height: 100%;
+}
+
+/*service page*/
+
+#service{
+   background-color: var(--maroon);
+}
+#service .container{
+   padding: 5%;
+   height: 100%;
+   width: 100%;
+}
+#service .container .row .col{
+   max-width: 50%;
+   padding: 5%;
+}
+
+#service .container img{
+   width: 100%;
+}
