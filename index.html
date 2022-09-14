@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" conent="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link id="style" rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/favicon.png">
+        <script src="js/window.js"></script>
+        <title>Home</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><button onclick="toggle()">Toggle Style</button></li>
+                <li class="secret"><a href="secret.html"></a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col"><img src="images/headshot.jpg" onclick="document.getElementById('about').scrollIntoView();" alt="Headshot of John McWhirter"></div>
+                    <div class="col"><h1>John McWhirter</h1><h2>Computer Engineering</h2></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Welcome to My Webpage</h3>
+                    <p>Howdy, my name is John Brea McWhirter. I published this website to provide users with more information of my personal life, technical portfolio, qualifications, and service. Please find the navigation bar at the top of the page for in-depth descriptions of these experiences. It is my intent to answer all interview-like questions using this webpage while sharing my personality through its features. Lastly, all images are links that can take you off this website to relevant sites. Thank you for finding this webpage and have a Good Bull!
+                    </p>
+                    
+                    </div>
+                    <div class="col">
+                        <img src="images/NASAmyportrait.jpg" onclick="window.scrollTo(0,0);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/index.js" type="module"></script>
+    </body>
+</html>
